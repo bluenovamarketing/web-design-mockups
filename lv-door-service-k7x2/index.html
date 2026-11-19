@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Las Vegas Door Service | Door Repair, Automation &amp; Hardware</title>
+<meta name="description" content="Door repair, automation, security and hardware in Las Vegas since 2000. Book a visit today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
+<script>document.documentElement.className += ' js';</script>
+<style>
+:root {
+  --ink: #10302a;
+  --muted: #4d6660;
+  --teal: #1f7a68;
+  --teal-d: #14584a;
+  --mint: #e7f4ef;
+  --sand: #f7f2e8;
+  --paper: #fffdf9;
+  --gold: #f2a93b;
+  --line: rgba(16, 48, 42, 0.12);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+h1, h2, h3, .disp { font-family: 'Sora', 'Inter', system-ui, sans-serif; margin: 0; letter-spacing: -0.025em; }
+p { margin: 0; }
+a { color: var(--teal-d); }
+img { display: block; max-width: 100%; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 30px; border-radius: 999px; font: 600 16px 'Inter', sans-serif; text-decoration: none; border: 0; cursor: pointer; transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, background .3s, color .3s; }
+.btn-gold { background: var(--gold); color: #2b1900; box-shadow: 0 10px 24px rgba(242,169,59,.38); }
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(242,169,59,.5); color: #2b1900; background: #f7b955; }
+.btn-line { background: #fff; color: var(--ink); border: 1.5px solid var(--line); }
+.btn-line:hover { transform: translateY(-3px); border-color: var(--teal); color: var(--teal-d); }
+.btn svg { width: 18px; height: 18px; transition: transform .3s; }
+.btn:hover svg { transform: translateX(4px); }
+
+/* nav */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background .3s, box-shadow .3s; }
+.nav.scrolled { background: rgba(255,253,249,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.logo b { font: 800 16px/1.05 'Sora', sans-serif; letter-spacing: .05em; }
+.logo b span { color: var(--teal); display: block; }
+.links { display: flex; align-items: center; gap: 6px 30px; flex-wrap: wrap; }
+.links a.l { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 15px; position: relative; padding: 8px 0; }
+.links a.l:after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+.links a.l:hover:after { transform: scaleX(1); }
+.links .btn { min-height: 44px; padding: 0 22px; font-size: 15px; }
+
+/* phone menu */
+.burger { display: none; width: 46px; height: 46px; border: 0; border-radius: 14px; background: #fff; box-shadow: 0 6px 18px rgba(16,48,42,.14); cursor: pointer; padding: 0; position: relative; }
+.burger i { position: absolute; left: 13px; right: 13px; height: 2.5px; border-radius: 2px; background: var(--ink); transition: transform .3s, opacity .2s, top .3s; }
+.burger i:nth-child(1) { top: 16px; } .burger i:nth-child(2) { top: 22px; } .burger i:nth-child(3) { top: 28px; }
+.nav.open .burger i:nth-child(1) { top: 22px; transform: rotate(45deg); }
+.nav.open .burger i:nth-child(2) { opacity: 0; }
+.nav.open .burger i:nth-child(3) { top: 22px; transform: rotate(-45deg); }
+@media (max-width: 760px) {
+  .burger { display: block; }
+  .nav .wrap { flex-wrap: nowrap; }
+  .nav.open { background: #fffdf9; box-shadow: 0 12px 30px rgba(16,48,42,.14); }
+  .links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 6px 22px 22px; background: #fffdf9; box-shadow: 0 18px 30px rgba(16,48,42,.14); opacity: 0; transform: translateY(-8px); pointer-events: none; visibility: hidden; transition: opacity .25s, transform .25s, visibility .25s; }
+  .nav.open .links { opacity: 1; transform: none; pointer-events: auto; visibility: visible; }
+  .links a.l { display: block; font-size: 18px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .links a.l:after { display: none; }
+  .links .btn { margin-top: 16px; justify-content: center; }
+}
+
+/* hero */
+.hero { position: relative; overflow: hidden; background: radial-gradient(ellipse 60% 70% at 78% 30%, #d9efe8 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 5% 90%, #fbe8c6 0%, transparent 70%), var(--paper); }
+.hero .wrap { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; min-height: 100vh; min-height: max(100vh, 780px); padding-top: 120px; padding-bottom: 70px; }
+.hero-copy { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 26px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 12px; font: 600 13px 'Inter', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); }
+.eyebrow i { width: 30px; height: 2px; background: var(--gold); display: block; }
+h1 { font-size: clamp(42px, 5.8vw, 78px); line-height: 1.03; font-weight: 800; }
+h1 em { font-style: normal; background: linear-gradient(var(--gold), var(--gold)) 0 92% / 0% 0.18em no-repeat; animation: swipe 1s .9s cubic-bezier(.2,.8,.2,1) forwards; padding-bottom: .02em; }
+@keyframes swipe { to { background-size: 100% 0.18em; } }
+.lead { font-size: 20px; color: var(--muted); max-width: 520px; }
+.row { display: flex; flex-wrap: wrap; gap: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 14px; font-weight: 500; box-shadow: 0 4px 14px rgba(16,48,42,.06); }
+.chip b { color: var(--teal-d); }
+.hero-copy > * { opacity: 0; transform: translateY(26px); animation: up .8s cubic-bezier(.2,.8,.2,1) forwards; }
+.hero-copy > *:nth-child(1) { animation-delay: .1s; } .hero-copy > *:nth-child(2) { animation-delay: .22s; } .hero-copy > *:nth-child(3) { animation-delay: .36s; } .hero-copy > *:nth-child(4) { animation-delay: .5s; } .hero-copy > *:nth-child(5) { animation-delay: .64s; }
+@keyframes up { to { opacity: 1; transform: none; } }
+
+/* hero photo */
+.photo-wrap { flex: 1 1 440px; min-width: 0; display: flex; justify-content: center; align-items: center; padding: 20px 0 30px; }
+.hero-photo { position: relative; width: min(100%, 460px); aspect-ratio: 864 / 1080; border-radius: 16px; overflow: hidden; background: #e9e2d3; box-shadow: 0 50px 90px rgba(16,48,42,.22), 0 12px 28px rgba(16,48,42,.12); }
+.hero-photo .stage { position: absolute; inset: 0; }
+.hero-photo .bg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero-photo .slot { position: absolute; left: 20.49%; top: 9.81%; width: 57.4%; height: 68.8%; overflow: visible; }
+.hero-photo .slot > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-photo .slot:not(.leafwrap):after { content: ""; position: absolute; inset: 0; box-shadow: inset 14px 0 22px rgba(0,0,0,.18), inset 0 10px 18px rgba(0,0,0,.10); pointer-events: none; }
+.hero-photo .leafwrap { perspective: 1000px; cursor: pointer; } .hero-photo { cursor: pointer; }
+.hero-photo .leaf { position: absolute; top: 0; bottom: 0; width: 50.2%; backface-visibility: hidden; will-change: transform; } .hero-photo .leaf.l { left: 0; transform-origin: 0 50%; } .hero-photo .leaf.r { right: 0; transform-origin: 100% 50%; }
+.hero-photo .leaf img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; object-fit: cover; } .hero-photo .leaf.r img { transform: scaleX(-1); } .hero-photo .leaf .sh { display: none; }
+.hero-photo .leaf .sh { position: absolute; inset: 0; background: #1a0e04; opacity: 0; }
+@keyframes swing { 0%,3% { transform: rotateY(0); animation-timing-function: cubic-bezier(.65,0,.25,1); } 18%,78% { transform: rotateY(74deg); animation-timing-function: cubic-bezier(.65,0,.25,1); } 93%,100% { transform: rotateY(0); } }
+@keyframes shade { 0%,3% { opacity: 0; animation-timing-function: cubic-bezier(.65,0,.25,1); } 18%,78% { opacity: .55; animation-timing-function: cubic-bezier(.65,0,.25,1); } 93%,100% { opacity: 0; } }
+@keyframes slowzoom { from { transform: scale(1.06); } to { transform: scale(1.0); } }
+@keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.hero .btn-gold { animation: pulse 2.6s ease-out infinite; }
+@keyframes pulse { 0% { box-shadow: 0 10px 24px rgba(242,169,59,.38), 0 0 0 0 rgba(242,169,59,.55); } 70%,100% { box-shadow: 0 10px 24px rgba(242,169,59,.38), 0 0 0 20px rgba(242,169,59,0); } }
+
+
+/* background life */
+.hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero-bg:after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,253,249,.97) 0%, rgba(255,253,249,.88) 36%, rgba(255,253,249,.42) 68%, rgba(255,253,249,.18) 100%), linear-gradient(180deg, rgba(255,253,249,.55) 0%, rgba(255,253,249,0) 22%, rgba(255,253,249,0) 72%, var(--paper) 100%); }
+@keyframes kb { from { transform: scale(1.04) translate3d(0,0,0); } to { transform: scale(1.16) translate3d(-3%,-1.5%,0); } }
+.fx { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.hero .fx { z-index: 1; }
+.fx i { position: absolute; border-radius: 50%; filter: blur(64px); opacity: .55; will-change: transform; }
+.fx .b1 { width: 440px; height: 440px; background: #b9e4d6; left: -8%; top: 8%; animation: drift1 24s ease-in-out infinite alternate; }
+.fx .b2 { width: 380px; height: 380px; background: #fbd9a2; right: -6%; top: 42%; animation: drift2 28s ease-in-out infinite alternate; }
+.fx .b3 { width: 320px; height: 320px; background: #d3efe6; left: 42%; bottom: -12%; animation: drift1 31s ease-in-out infinite alternate-reverse; }
+@keyframes drift1 { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(90px,-60px,0) scale(1.18); } }
+@keyframes drift2 { from { transform: translate3d(0,0,0) scale(1.1); } to { transform: translate3d(-110px,50px,0) scale(.9); } }
+.hero .wrap, .pad > .wrap { position: relative; z-index: 2; }
+section.pad { overflow: hidden; }
+.steps:before { content: ""; position: absolute; inset: 0; z-index: 0; background-image: radial-gradient(rgba(31,122,104,.20) 1.6px, transparent 1.8px); background-size: 30px 30px; animation: dots 50s linear infinite; }
+@keyframes dots { to { background-position: 300px 150px; } }
+.since-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.since-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; opacity: .26; mix-blend-mode: luminosity; animation: kb 34s ease-in-out infinite alternate; }
+.since:after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(110deg, rgba(255,255,255,0) 35%, rgba(255,255,255,.16) 50%, rgba(255,255,255,0) 65%); background-size: 250% 100%; animation: sweep 9s ease-in-out infinite; }
+@keyframes sweep { from { background-position: 130% 0; } to { background-position: -130% 0; } }
+
+.bg-sway { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.hero-bg .pan, .bg-sway .pan { position: absolute; inset: 0; }
+.hero-bg .pan { opacity: .66; } .bg-sway .pan { opacity: .24; }
+.pan .stage { position: absolute; }
+.pan .sw { animation: sway 6s ease-in-out infinite alternate, flutter 3.4s ease-in-out infinite alternate; will-change: transform, rotate; }
+@keyframes sway { from { rotate: calc(var(--a) * -1); } to { rotate: var(--a); } }
+@keyframes flutter { from { transform: skewX(calc(var(--a) * -.9)); } to { transform: skewX(calc(var(--a) * .9)); } }
+.pan .stage img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; max-width: none; display: block; }
+
+
+/* ===== colour and depth ===== */
+#services { background: linear-gradient(155deg, #0c3f35 0%, #14584a 48%, #1f7a68 100%); color: #fff; }
+#services:before { content: ""; position: absolute; inset: 0; z-index: 0; background-image: radial-gradient(rgba(255,255,255,.10) 1.4px, transparent 1.7px); background-size: 28px 28px; animation: dots 60s linear infinite; }
+#services .fx .b1 { background: #2fc4a4; opacity: .38; } #services .fx .b2 { background: #f2a93b; opacity: .30; } #services .fx .b3 { background: #4fd1b3; opacity: .28; }
+#services h2 { color: #fff; } #services .svc h3 { color: var(--ink); } #services .sub { color: #cfeae2; } #services .eyebrow { color: #ffd48a; }
+#services .svc { border: 0; box-shadow: 0 30px 60px rgba(0,0,0,.28); }
+.svc:after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; z-index: 3; background: linear-gradient(90deg, var(--gold), #ffd48a); }
+.grid3 > :nth-child(2) .svc:after { background: linear-gradient(90deg, #2fc4a4, #8be3cf); }
+.grid3 > :nth-child(3) .svc:after { background: linear-gradient(90deg, #ef7d57, #ffb08f); }
+.svc .meta { display: inline-block; align-self: flex-start; background: var(--mint); padding: 4px 12px; border-radius: 999px; }
+#work { background: linear-gradient(180deg, #fffdf9 0%, #fff1d8 100%); padding-top: clamp(70px, 9vw, 120px) !important; }
+#work:before { content: ""; position: absolute; width: 520px; height: 520px; right: -140px; top: -120px; border-radius: 50%; background: radial-gradient(circle, rgba(242,169,59,.45), rgba(242,169,59,0) 68%); animation: breathe 9s ease-in-out infinite alternate; }
+@keyframes breathe { from { transform: scale(.9); opacity: .7; } to { transform: scale(1.12); opacity: 1; } }
+#work .tick i { background: var(--teal); color: #fff; }
+.steps { background: linear-gradient(180deg, #fff1d8 0%, #f7f2e8 40%, #e7f4ef 100%); }
+.step { background: #fff; border-radius: 24px; padding: 34px 30px 30px; box-shadow: 0 18px 44px rgba(16,48,42,.10); border-top: 0; }
+.step:before { top: 0; left: 0; height: 6px; border-radius: 24px 24px 0 0; background: linear-gradient(90deg, var(--gold), #ffd48a); }
+.stepgrid > :nth-child(2):before { background: linear-gradient(90deg, #2fc4a4, #8be3cf); }
+.stepgrid > :nth-child(3):before { background: linear-gradient(90deg, #ef7d57, #ffb08f); }
+.step .n { background: linear-gradient(135deg, var(--gold), #ef7d57); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step:hover .n { color: transparent; }
+.stepgrid { gap: 28px; }
+.revsec, section.pad:has(.revs) { background: linear-gradient(180deg, #e3f4ee 0%, #f2fbf8 100%); }
+.rev { background: #fff; border-color: rgba(31,122,104,.35); box-shadow: 0 16px 40px rgba(16,48,42,.08); }
+h2 em, h2 .hl { font-style: normal; }
+.wv { position: absolute; left: 0; right: 0; bottom: -1px; height: 64px; z-index: 1; pointer-events: none; background-repeat: repeat-x; background-size: 1440px 64px; animation: wave 38s linear infinite; }
+@keyframes wave { to { background-position-x: -1440px; } }
+
+#services .wv { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'><path fill='%23fffdf9' d='M0,38 C240,0 480,76 720,38 C960,0 1200,76 1440,38 L1440,80 L0,80 Z'/></svg>"); }
+#work .wv { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'><path fill='%23fff1d8' d='M0,38 C240,0 480,76 720,38 C960,0 1200,76 1440,38 L1440,80 L0,80 Z'/></svg>"); }
+.steps .wv { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'><path fill='%231f7a68' d='M0,38 C240,0 480,76 720,38 C960,0 1200,76 1440,38 L1440,80 L0,80 Z'/></svg>"); }
+/* marquee */
+.band { background: var(--mint); border-block: 1px solid var(--line); overflow: hidden; padding: 22px 0; }
+.track { display: flex; width: max-content; animation: slide 40s linear infinite; }
+.track span { font: 800 clamp(28px, 4vw, 46px)/1 'Sora', sans-serif; text-transform: uppercase; letter-spacing: -.01em; white-space: nowrap; display: flex; align-items: center; gap: 30px; padding-right: 30px; color: rgba(20,88,74, calc(.30 + var(--h, 0) * .70)); transform: scale(calc(1 + var(--h, 0) * .07)); transform-origin: 50% 60%; will-change: transform, color; }
+.track span:after { content: ""; width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); flex: none; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* sections */
+section { position: relative; }
+.pad { padding: clamp(70px, 9vw, 120px) 0; }
+.head { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+h2 { font-size: clamp(34px, 4.4vw, 56px); line-height: 1.06; font-weight: 800; }
+.sub { font-size: 18px; color: var(--muted); }
+
+/* reveal */
+.js .rv { opacity: 0; transform: translateY(46px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+.js .rv.in { opacity: 1; transform: none; }
+.js .rv.d1 { transition-delay: .12s; } .js .rv.d2 { transition-delay: .24s; }
+
+/* service cards */
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 56px; }
+.tiltwrap { perspective: 1100px; }
+.svc { position: relative; background: #fff; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 14px 40px rgba(16,48,42,.1); transition: transform .25s ease-out, box-shadow .4s; display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d; will-change: transform; }
+.svc:hover { box-shadow: 0 30px 70px rgba(16,48,42,.2); }
+.svc .ph { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+.svc .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
+.svc:hover .ph img { transform: scale(1.1); }
+.svc .glare { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(255,255,255,.55), transparent 55%); opacity: 0; transition: opacity .3s; }
+.svc:hover .glare { opacity: 1; }
+.svc .price-badge { position: absolute; top: 16px; right: 16px; background: var(--gold); color: #2b1900; font: 800 18px 'Sora', sans-serif; padding: 8px 16px; border-radius: 999px; box-shadow: 0 8px 18px rgba(0,0,0,.18); transform: translateZ(40px); }
+.svc .body { padding: 28px 28px 30px; display: flex; flex-direction: column; gap: 12px; flex: 1; transform: translateZ(20px); }
+.svc h3 { font-size: 26px; font-weight: 700; }
+.svc p { color: var(--muted); flex: 1; }
+.svc .meta { font-size: 14px; color: var(--teal-d); font-weight: 600; }
+
+/* split / showcase */
+.split { display: flex; flex-wrap: wrap; align-items: center; gap: 60px; }
+.split .pic { flex: 1 1 440px; min-width: 0; position: relative; }
+.split .pic .mask { border-radius: 30px; overflow: hidden; aspect-ratio: 4 / 4.6; box-shadow: 0 40px 80px rgba(16,48,42,.22); }
+.split .pic img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
+.split .pic .float { position: absolute; right: -18px; bottom: 34px; background: #fff; border-radius: 20px; padding: 18px 22px; box-shadow: 0 24px 50px rgba(16,48,42,.22); display: flex; align-items: center; gap: 14px; animation: bob 5s ease-in-out infinite; }
+.split .pic .float b { font: 800 34px/1 'Sora', sans-serif; color: var(--teal-d); }
+.split .pic .float span { font-size: 14px; color: var(--muted); line-height: 1.3; }
+@keyframes bob { 50% { transform: translateY(-12px); } }
+.split .txt { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.ticks { display: flex; flex-direction: column; gap: 16px; margin-top: 6px; }
+.tick { display: flex; gap: 16px; align-items: flex-start; }
+.tick i { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--mint); display: grid; place-items: center; color: var(--teal-d); }
+.tick b { display: block; font-size: 18px; }
+.tick span { color: var(--muted); font-size: 16px; }
+
+/* steps */
+.steps { background: var(--sand); }
+.stepgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; margin-top: 56px; position: relative; }
+.step { position: relative; padding-top: 22px; }
+.step:before { content: ""; position: absolute; top: 0; left: 0; height: 3px; width: 0; background: var(--teal); transition: width 1.2s .3s cubic-bezier(.2,.8,.2,1); }
+.step.in:before { width: 100%; }
+.step .n { font: 800 84px/1 'Sora', sans-serif; color: rgba(242,169,59,.45); transition: color .4s, transform .4s; display: block; margin-bottom: 8px; }
+.step:hover .n { color: var(--gold); transform: translateY(-5px); }
+.step h3 { font-size: 24px; margin-bottom: 8px; }
+.step p { color: var(--muted); }
+
+/* since band */
+.since { background: var(--teal); color: #fff; overflow: hidden; }
+.since .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 30px 60px; }
+.since .big { font: 800 clamp(110px, 18vw, 230px)/.9 'Sora', sans-serif; letter-spacing: -.05em; color: rgba(255,255,255,.95); flex: 0 1 auto; }
+.since .txt2 { flex: 1 1 340px; min-width: 0; }
+.since p { font-size: 20px; max-width: 520px; color: #eaf7f3; }
+.since .stats { display: flex; gap: 40px; flex-wrap: wrap; margin-top: 26px; }
+.since .stats div b { display: block; font: 800 44px/1 'Sora', sans-serif; color: #fff; }
+.since .stats .lbl { font-size: 14px; color: #d3efe7; }
+
+/* reviews */
+.revs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; margin-top: 48px; }
+.rev { border: 2px dashed rgba(242,169,59,.8); border-radius: 24px; padding: 30px; background: #fffaf0; transition: transform .4s, box-shadow .4s; }
+.rev:hover { transform: translateY(-8px); box-shadow: 0 24px 50px rgba(16,48,42,.12); }
+.rev p { font-size: 18px; margin-bottom: 18px; }
+.rev b { color: var(--teal-d); }
+
+/* contact */
+.contact { background: linear-gradient(180deg, var(--paper), var(--mint)); }
+.cwrap { display: flex; flex-wrap: wrap; gap: 50px; }
+.cinfo { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.cinfo dl { margin: 10px 0 0; display: grid; gap: 18px; }
+.cinfo dt { font: 600 12px 'Inter'; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); }
+.cinfo dd { margin: 2px 0 0; font-size: 18px; }
+.cinfo dd a { color: var(--ink); font-weight: 600; }
+form { flex: 1 1 400px; min-width: 0; background: #fff; border-radius: 28px; padding: clamp(24px, 4vw, 40px); box-shadow: 0 30px 70px rgba(16,48,42,.14); border: 1px solid var(--line); display: grid; gap: 18px; align-content: start; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+.f { display: flex; flex-direction: column; gap: 8px; }
+.f label { font-size: 14px; font-weight: 600; color: var(--muted); }
+.f input, .f textarea { font: 400 16px 'Inter', sans-serif; padding: 14px 16px; min-height: 52px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--paper); color: var(--ink); transition: border-color .3s, box-shadow .3s; }
+.f textarea { min-height: 130px; resize: vertical; }
+.f input:focus, .f textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 4px rgba(31,122,104,.18); }
+
+footer { background: var(--teal-d); color: #d6efe8; padding: 34px 0; font-size: 14px; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; }
+footer .foot2 { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(214,239,232,.18); }
+footer .foot2 b { color: #fff; font-weight: 600; }
+footer .legal a { color: #d6efe8; text-decoration: underline; text-underline-offset: 3px; }
+footer .legal a:hover { color: #fff; }
+.modal { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(16,48,42,.55); }
+.modal.on { display: flex; }
+.modal .sheet { position: relative; width: min(680px, 100%); max-height: 86vh; overflow: auto; background: #fff; border-radius: 20px; padding: 34px 36px; box-shadow: 0 40px 90px rgba(0,0,0,.35); color: var(--ink); }
+.modal .x { position: absolute; top: 12px; right: 16px; border: 0; background: none; font-size: 32px; line-height: 1; cursor: pointer; color: var(--muted); }
+.modal .doc { display: none; } .modal .doc.on { display: block; }
+.modal h3 { font-size: 28px; margin-bottom: 8px; } .modal h4 { font-size: 16px; margin: 18px 0 4px; } .modal p { color: var(--muted); font-size: 15px; line-height: 1.6; }
+.modal .note { background: var(--mint); color: var(--teal-d); border-radius: 10px; padding: 8px 12px; font-size: 13px; margin-bottom: 14px; }
+
+@media (max-width: 760px) { .photo-wrap { order: -1; flex: 1 1 100%; padding: 4px 0 6px; } .hero-photo { width: min(72%, 290px); } .split .pic .float { right: 10px; } .tag { display: none; } }
+</style>
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Las Vegas Door Service home">
+      <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><rect x="2" y="2" width="30" height="36" rx="3" fill="#fff" stroke="#1f7a68" stroke-width="2.5"/><polygon points="8,6 26,10 26,38 8,38" fill="#1f7a68"/><circle cx="22" cy="24" r="2" fill="#f2a93b"/></svg>
+      <b>LAS VEGAS<span>DOOR SERVICE</span></b>
+    </a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainLinks"><i></i><i></i><i></i></button>
+    <nav class="links" id="mainLinks" aria-label="Main">
+      <a class="l" href="#services">Services</a>
+      <a class="l" href="#work">Our work</a>
+      <a class="l" href="#how">How it works</a>
+      <a class="l" href="#book">Contact</a>
+      <a class="btn btn-gold" href="tel:7028408124">(702) 840-8124</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow"><i></i>Las Vegas, Nevada · Since 2000</span>
+      <h1>Doors that work as hard as <em>Las Vegas</em> does.</h1>
+      <p class="lead">Door repair, automation and hardware for Las Vegas homes and businesses. Book a visit and get a door that finally works.</p>
+      <div class="row">
+        <a class="btn btn-gold" href="#book">Book a visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="tel:7028408124">Call (702) 840-8124</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>26 years</b> in Las Vegas</span>
+        <span class="chip"><b>Mon–Sat</b> appointments</span>
+        <span class="chip">1810 E Sahara Ave</span>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <div class="hero-photo" id="heroPhoto"><div class="stage">
+          <img class="bg" src="img/door_bg.jpg" alt="Elegant walnut front door with a slim brass pull in a limestone entry">
+          <div class="slot"><img src="img/room.jpg" alt="Bright living room"></div>
+          <div class="slot leafwrap"><div class="leaf l"><img src="img/leaf_l.jpg" alt=""><span class="sh"></span></div><div class="leaf r"><img src="img/leaf_l.jpg" alt=""><span class="sh"></span></div></div>
+        </div></div>
+    </div>
+  </section>
+
+<!-- MARQUEE -->
+<div class="band" aria-hidden="true">
+  <div class="track" id="track"></div>
+</div>
+
+<!-- SERVICES -->
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><i></i>What we do</span>
+      <h2>Three ways we keep Las Vegas doors working.</h2>
+      <p class="sub">Pick the service that fits and we take it from there.</p>
+    </div>
+    <div class="grid3">
+      <div class="tiltwrap rv">
+        <article class="svc" data-tilt>
+          <div class="ph"><img src="img/repair.jpg" alt="Technician adjusting a brass door hinge" style="object-position: 50% 30%"><span class="glare"></span></div>
+          <div class="body">
+            <span class="meta">01</span>
+            <h3>Door repair &amp; maintenance</h3>
+            <p>Sticking, sagging, scraping or won't latch? We realign, repair and tune it so it swings like new.</p>
+            <a class="btn btn-gold" href="#book">Book Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+      <div class="tiltwrap rv d1">
+        <article class="svc" data-tilt>
+          <div class="ph"><img src="img/lock.jpg" alt="Smart keypad deadbolt on a white door"><span class="glare"></span></div>
+          <div class="body">
+            <span class="meta">02</span>
+            <h3>Automation &amp; security</h3>
+            <p>Keypads, smart locks and automatic openers installed and set up right, so the door works the way you do.</p>
+            <a class="btn btn-gold" href="#book">Book Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+      <div class="tiltwrap rv d2">
+        <article class="svc" data-tilt>
+          <div class="ph"><img src="img/hardware.jpg" alt="Brass and black door handles, hinges and deadbolts"><span class="glare"></span></div>
+          <div class="body">
+            <span class="meta">03</span>
+            <h3>Hardware</h3>
+            <p>Handles, hinges, closers and locks supplied and fitted cleanly. Quality parts that stand up to the desert.</p>
+            <a class="btn btn-gold" href="#book">Book Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="wv" aria-hidden="true"></div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="pad" id="work" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="split">
+      <div class="pic rv">
+        <div class="mask"><img id="parallax" src="img/storefront.jpg" alt="Glass storefront entrance with a long push bar"></div>
+        <div class="float"><b>26</b><span>years keeping<br>Las Vegas doors working</span></div>
+      </div>
+      <div class="txt">
+        <span class="eyebrow rv"><i></i>Every entrance</span>
+        <h2 class="rv d1">Homes. Storefronts. Every door in between.</h2>
+        <p class="sub rv d1">From the front door at home to the glass entrance of your business, we keep it opening, closing and locking the way it should.</p>
+        <div class="ticks">
+          <div class="tick rv d1"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></i><div><b>Residential entry &amp; interior doors</b><span>Realigned, repaired and re-hung.</span></div></div>
+          <div class="tick rv d2"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></i><div><b>Storefront &amp; commercial doors</b><span>Closers, push bars and automatic openers.</span></div></div>
+          <div class="tick rv d2"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></i><div><b>Locks, keypads &amp; hardware</b><span>New hardware fitted cleanly and tested.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wv" aria-hidden="true"></div>
+</section>
+
+<!-- HOW -->
+<section class="pad steps" id="how">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><i></i>How it works</span>
+      <h2>From stuck to smooth in three steps.</h2>
+    </div>
+    <div class="stepgrid">
+      <div class="step rv"><span class="n">01</span><h3>Book your visit</h3><p>Pick a service, send a message or call. Appointments run Monday to Saturday.</p></div>
+      <div class="step rv d1"><span class="n">02</span><h3>We diagnose and fix</h3><p>We look it over, tell you what it needs and get to work with quality parts.</p></div>
+      <div class="step rv d2"><span class="n">03</span><h3>Walk right through</h3><p>A door that opens, closes and locks the way it should. That's the whole point.</p></div>
+    </div>
+  </div>
+  <div class="wv" aria-hidden="true"></div>
+</section>
+
+<!-- SINCE -->
+<section class="pad since">
+  <div class="since-bg" aria-hidden="true"><img src="img/storefront.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="big rv" aria-label="Since 2000">2000</div>
+    <div class="rv d1 txt2">
+      <p>Since opening our doors in 2000, we've become masters of our craft. Quality products, exceptional service and customer care that keeps our community coming back.</p>
+      <div class="stats">
+        <div><b><span data-count="26">0</span></b><span class="lbl">years in Las Vegas</span></div>
+        <div><b><span data-count="6">0</span></b><span class="lbl">days a week to reach us</span></div>
+        <div><b><span data-count="3">0</span></b><span class="lbl">ways we can help</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="pad">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow"><i></i>Neighbors say</span>
+      <h2>Trusted across Las Vegas.</h2>
+    </div>
+    <div class="revs">
+      <div class="rev rv"><p>[Customer review goes here. Pull a real quote from the Google Business Profile.]</p><b>[Customer name], Las Vegas</b></div>
+      <div class="rev rv d1"><p>[Customer review goes here. Short, specific quotes about the repair work.]</p><b>[Customer name], Las Vegas</b></div>
+      <div class="rev rv d2"><p>[Customer review goes here. A business customer quote works well here.]</p><b>[Business name], Las Vegas</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="pad contact" id="book">
+  <div class="bg-sway" id="contactBg" aria-hidden="true"></div>
+  <div class="wrap cwrap">
+    <div class="cinfo rv">
+      <span class="eyebrow"><i></i>Get in touch</span>
+      <h2>Ready for a door that just works?</h2>
+      <p class="sub">Tell us what's going on with your door and we'll get you on the schedule.</p>
+      <dl>
+        <div><dt>Visit</dt><dd>1810 E Sahara Ave, Las Vegas, NV 89104</dd></div>
+        <div><dt>Call</dt><dd><a href="tel:7028408124" style="font-size: 24px;">(702) 840-8124</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:edgar.h@lasvegasdoorservice.com">edgar.h@lasvegasdoorservice.com</a></dd></div>
+        <div><dt>Hours</dt><dd>Mon – Fri: 9am – 6pm<br>Sat: 10am – 2pm<br>Sun: Closed</dd></div>
+      </dl>
+    </div>
+    <form class="rv d1" onsubmit="return false">
+      <div class="f"><label for="n">Name</label><input id="n" type="text" placeholder="Your name"></div>
+      <div class="two">
+        <div class="f"><label for="e">Email</label><input id="e" type="email" placeholder="you@example.com"></div>
+        <div class="f"><label for="p">Phone</label><input id="p" type="tel" placeholder="(702) 555-0100"></div>
+      </div>
+      <div class="f"><label for="m">What's going on with your door?</label><textarea id="m" placeholder="Tell us a bit about it"></textarea></div>
+      <button class="btn btn-gold" type="button" style="justify-self: start;">Request my visit</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Las Vegas Door Service LLC. All rights reserved.</span>
+    <span>1810 E Sahara Ave, Las Vegas, NV 89104 · (702) 840-8124</span>
+  </div>
+  <div class="wrap foot2">
+    <span>Website designed by <b>Blue Nova Marketing</b></span>
+    <span class="legal"><a href="#privacy" data-legal="privacy">Privacy Policy</a> · <a href="#terms" data-legal="terms">Terms &amp; Conditions</a></span>
+  </div>
+</footer>
+
+<div class="modal" id="legal" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true">
+    <button class="x" id="legalX" aria-label="Close">&times;</button>
+    <div id="privacy" class="doc">
+      <h3>Privacy Policy</h3>
+      <p class="note">Sample text for the mockup. Have this reviewed before the site goes live.</p>
+      <p>Las Vegas Door Service LLC (“we”, “us”) respects your privacy. This policy explains what we collect when you use this website and how we use it.</p>
+      <h4>What we collect</h4>
+      <p>When you request a visit or contact us, we collect the details you give us, such as your name, phone number, email address, service address and a description of the work. Like most websites, we may also collect basic technical data such as browser type and pages viewed, using cookies or similar tools.</p>
+      <h4>How we use it</h4>
+      <p>We use your information to respond to requests, schedule and carry out service, send appointment updates, improve this website and meet legal obligations. We do not sell your personal information.</p>
+      <h4>Sharing</h4>
+      <p>We share information only with service providers who help us run the business (for example scheduling, email or website hosting), or when the law requires it.</p>
+      <h4>Your choices</h4>
+      <p>You can ask us to access, correct or delete the information we hold about you by calling (702) 840-8124 or visiting 1810 E Sahara Ave, Las Vegas, NV 89104. You can also turn off cookies in your browser settings.</p>
+      <h4>Changes</h4>
+      <p>We may update this policy from time to time. The latest version will always be posted on this page.</p>
+    </div>
+    <div id="terms" class="doc">
+      <h3>Terms &amp; Conditions</h3>
+      <p class="note">Sample text for the mockup. Have this reviewed before the site goes live.</p>
+      <p>By using this website you agree to these terms. If you do not agree, please do not use the site.</p>
+      <h4>Information on this site</h4>
+      <p>We work to keep the information here accurate, but services, availability and hours can change. Nothing on this site is a binding quote or offer. Final scope and pricing are confirmed with you before work begins.</p>
+      <h4>Service requests</h4>
+      <p>Submitting a request form does not guarantee an appointment. We will contact you to confirm the date, time and details of the visit.</p>
+      <h4>Use of the site</h4>
+      <p>Content, images and branding on this site belong to Las Vegas Door Service LLC or its licensors. You may not copy or reuse them without permission.</p>
+      <h4>Limitation of liability</h4>
+      <p>This site is provided “as is”. To the extent allowed by law, we are not liable for losses arising from use of the site or reliance on its content.</p>
+      <h4>Governing law</h4>
+      <p>These terms are governed by the laws of the State of Nevada.</p>
+      <h4>Contact</h4>
+      <p>Las Vegas Door Service LLC, 1810 E Sahara Ave, Las Vegas, NV 89104, (702) 840-8124.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var reduce = false; // mockup: always show motion
+
+  // marquee words
+  var words = ['Door repair', 'Maintenance', 'Automation', 'Security', 'Hardware', 'Las Vegas'];
+  var html = '';
+  for (var r = 0; r < 8; r++) for (var i = 0; i < words.length; i++) html += '<span>' + words[i] + '</span>';
+  document.getElementById('track').innerHTML = html;
+
+  // marquee words glow as they cross the middle of the screen
+  (function () {
+    var band = document.querySelector('.band'), spans = document.querySelectorAll('#track span');
+    if (!band || !spans.length) return;
+    function tick() {
+      var br = band.getBoundingClientRect(), vh = window.innerHeight || 800;
+      if (br.bottom > 0 && br.top < vh) {
+        var W = window.innerWidth || 1200, mid = W / 2, reach = Math.max(180, W * 0.17);
+        for (var i = 0; i < spans.length; i++) {
+          var r = spans[i].getBoundingClientRect();
+          if (r.right < -50 || r.left > W + 50) continue;
+          var d = Math.abs((r.left + r.right) / 2 - mid) / reach;
+          var h = d >= 1 ? 0 : Math.pow(1 - d, 1.4);
+          spans[i].style.setProperty('--h', h.toFixed(3));
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+
+  // background life: drifting glows in each section, rising light motes in the hero
+  document.querySelectorAll('.hero, section.pad:not(.since)').forEach(function (sec) {
+    var fx = document.createElement('div'); fx.className = 'fx'; fx.setAttribute('aria-hidden', 'true');
+    fx.innerHTML = '<i class="b1"></i><i class="b2"></i><i class="b3"></i>';
+    sec.insertBefore(fx, sec.firstChild);
+  });
+
+  // wind: plants in the background photos sway gently
+  function buildBg(host, src, zones) {
+    if (!host) return;
+    var pan = document.createElement('div'); pan.className = 'pan';
+    var stage = document.createElement('div'); stage.className = 'stage';
+    var base = new Image(); base.src = src; base.alt = ''; stage.appendChild(base);
+    zones.forEach(function (z) {
+      var im = new Image(); im.src = src; im.alt = ''; im.className = 'sw';
+      var m = 'radial-gradient(ellipse ' + z.rx + '% ' + z.ry + '% at ' + z.cx + '% ' + z.cy + '%, #000 40%, transparent 100%)';
+      im.style.cssText = '-webkit-mask-image:' + m + ';mask-image:' + m + ';transform-origin:' + z.ox + '% ' + z.oy + '%;--a:' + z.a + 'deg;animation-duration:' + z.d + 's,' + (z.d * 0.55).toFixed(2) + 's;animation-delay:-' + (Math.random() * z.d).toFixed(1) + 's,-' + (Math.random() * z.d).toFixed(1) + 's';
+      stage.appendChild(im);
+    });
+    var inv = zones.map(function (z) { return 'radial-gradient(ellipse ' + z.rx + '% ' + z.ry + '% at ' + z.cx + '% ' + z.cy + '%, transparent 40%, #000 100%)'; }).join(',');
+    base.style.cssText = '-webkit-mask-image:' + inv + ';mask-image:' + inv + ';-webkit-mask-composite:source-in;mask-composite:intersect';
+    pan.appendChild(stage); host.insertBefore(pan, host.firstChild);
+    function fit() {
+      var w = host.clientWidth, h = host.clientHeight, k = Math.max(w / 1920, h / 1080);
+      stage.style.width = (1920 * k) + 'px'; stage.style.height = (1080 * k) + 'px';
+      stage.style.left = ((w - 1920 * k) / 2) + 'px'; stage.style.top = ((h - 1080 * k) / 2) + 'px';
+    }
+    fit(); window.addEventListener('resize', fit);
+    if (window.ResizeObserver) new ResizeObserver(fit).observe(host);
+  }
+  buildBg(document.getElementById('heroBg'), 'img/scene.jpg', [
+    { cx: 70.3, cy: 14.8, rx: 18, ry: 20, ox: 70.8, oy: 30, a: 2.6, d: 7.5 },   // palm
+    { cx: 14, cy: 62, rx: 9, ry: 20, ox: 15, oy: 76, a: 4, d: 5.6 },          // left ocotillo / agave
+    { cx: 94.5, cy: 56, rx: 8, ry: 20, ox: 95, oy: 72, a: 3.6, d: 6.4 },        // right ocotillo
+    { cx: 88, cy: 66, rx: 6, ry: 8, ox: 89, oy: 72, a: 3, d: 4.8 },           // right agave
+    { cx: 41.5, cy: 52, rx: 6, ry: 10, ox: 41.5, oy: 60, a: 2.2, d: 6.9 }       // distant tree
+  ]);
+  buildBg(document.getElementById('contactBg'), 'img/entry.jpg', [
+    { cx: 17, cy: 40, rx: 20, ry: 26, ox: 17, oy: 65, a: 3, d: 6.8 },         // maple
+    { cx: 94, cy: 14, rx: 9, ry: 17, ox: 94, oy: 30, a: 2.8, d: 7.2 },          // upper-right trees
+    { cx: 9, cy: 92, rx: 13, ry: 12, ox: 9, oy: 100, a: 4, d: 5.2 },          // grasses lower-left
+    { cx: 94, cy: 90, rx: 10, ry: 13, ox: 94, oy: 100, a: 4, d: 5.8 }         // grasses lower-right
+  ]);
+
+  // backup reveal: works from scroll position alone
+  function startCount(el) {
+    if (el.getAttribute('data-done')) return;
+    el.setAttribute('data-done', '1');
+    var end = +el.getAttribute('data-count'), t0 = null;
+    function tick(t) {
+      if (t0 === null) t0 = t;
+      var k = Math.min((t - t0) / 1400, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(tick);
+    }
+    reduce ? (el.textContent = end) : requestAnimationFrame(tick);
+  }
+  function revealCheck() {
+    var vh = window.innerHeight || 800;
+    document.querySelectorAll('.rv:not(.in), .step:not(.in)').forEach(function (el) {
+      if (el.getBoundingClientRect().top < vh * 0.92) el.classList.add('in');
+    });
+    document.querySelectorAll('[data-count]:not([data-done])').forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * 0.85 && r.bottom > 0) startCount(el);
+    });
+  }
+  setInterval(revealCheck, 400);
+  window.addEventListener('touchmove', revealCheck, { passive: true });
+  window.addEventListener('resize', revealCheck);
+
+  // phone menu
+  (function () {
+    var b = document.getElementById('burger'), n = document.getElementById('nav');
+    if (!b || !n) return;
+    function set(o) { n.classList.toggle('open', o); b.setAttribute('aria-expanded', o ? 'true' : 'false'); b.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); }
+    b.addEventListener('click', function () { set(!n.classList.contains('open')); });
+    n.querySelectorAll('.links a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+    window.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // sticky nav background
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    revealCheck();
+    var img = document.getElementById('parallax');
+    if (img && !reduce) {
+      var rect = img.parentNode.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var p = (rect.top + rect.height / 2 - vh / 2) / vh;
+      img.style.transform = 'translateY(' + (p * -40) + 'px)';
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // reveal on scroll
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.rv, .step').forEach(function (el) { io.observe(el); });
+
+  // count up
+  var co = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { co.unobserve(e.target); startCount(e.target); } });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('[data-count]').forEach(function (el) { co.observe(el); });
+
+  // legal pop-ups
+  (function () {
+    var m = document.getElementById('legal');
+    function show(k) { m.classList.add('on'); document.getElementById('privacy').classList.toggle('on', k === 'privacy'); document.getElementById('terms').classList.toggle('on', k === 'terms'); m.querySelector('.sheet').scrollTop = 0; }
+    document.querySelectorAll('[data-legal]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); show(a.getAttribute('data-legal')); }); });
+    function hide() { m.classList.remove('on'); }
+    document.getElementById('legalX').addEventListener('click', hide);
+    m.addEventListener('click', function (e) { if (e.target === m) hide(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+  })();
+
+  // double doors: three styles, swapped while closed; script-driven; tap to open/close
+  (function () {
+    var L = document.querySelector('.leaf.l'), R = document.querySelector('.leaf.r'), shs = document.querySelectorAll('.leaf .sh'), box = document.getElementById('heroPhoto');
+    if (!L || !R) return;
+    var styles = [
+      { img: 'img/leaf_l.jpg' },    // contemporary walnut
+      { img: 'img/steel_l.png' },   // black steel and glass, horizontal panes
+      { img: 'img/trad_l.png' }     // traditional paneled wood, arched iron and glass
+    ];
+    styles.forEach(function (st) { var i = new Image(); i.src = st.img; });
+    // timeline (seconds): closed 2s at page load, then each cycle: open 1.4 -> hold 1 -> swap -> hold 1.6 -> close 1.4 -> closed 2
+    var CYCLE = 7.4, OPEN_AT = 1.4, SWAP_AT = 2.4, CLOSE_AT = 4.0, SHUT_AT = 5.4;
+    var MAX = 68, cur = 0, hold = null, start = performance.now() + 2000, swapN = -1, idx = 0;
+    var imgL = L.querySelector('img'), imgR = R.querySelector('img');
+    var imgL2 = imgL.cloneNode(), imgR2 = imgR.cloneNode();
+    L.appendChild(imgL2); R.appendChild(imgR2);
+    imgL2.style.opacity = imgR2.style.opacity = 0;
+    var allImgs = [imgL, imgR, imgL2, imgR2], front = 0;   // front 0 = imgL/imgR visible, 1 = imgL2/imgR2 visible
+    function setStyle(i) { imgL.src = styles[i].img; imgR.src = styles[i].img; }
+    function swapStyle() {
+      // smooth melt: the next design fades in over the current one while the doors stay open
+      idx = (idx + 1) % styles.length;
+      var show = front ? [imgL, imgR] : [imgL2, imgR2], hide = front ? [imgL2, imgR2] : [imgL, imgR];
+      show[0].src = show[1].src = styles[idx].img;
+      show[0].style.opacity = show[1].style.opacity = 1;
+      hide[0].style.opacity = hide[1].style.opacity = 0;
+      front = front ? 0 : 1;
+    }
+    allImgs.forEach(function (im) { im.style.transition = 'opacity .9s ease-in-out'; });
+    function ease(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+    function cycleTarget(ms) {
+      if (ms < 0) return 0;
+      var t = (ms / 1000) % CYCLE;
+      if (t < OPEN_AT) return MAX * ease(t / OPEN_AT);
+      if (t < CLOSE_AT) return MAX;
+      if (t < SHUT_AT) return MAX * (1 - ease((t - CLOSE_AT) / (SHUT_AT - CLOSE_AT)));
+      return 0;
+    }
+    box.addEventListener('click', function () {
+      hold = { v: cur > MAX / 2 ? 0 : MAX, until: performance.now() + 4000 };
+    });
+    var last = performance.now();
+    function frame(now) {
+      var dt = Math.min(now - last, 60); last = now;
+      var n = Math.floor((now - start) / 1000 / CYCLE);
+      var ms = now - start, tt = ms >= 0 ? (ms / 1000) % CYCLE : 0;
+      if (ms >= 0 && tt >= SWAP_AT && tt < CLOSE_AT && swapN !== n) { swapN = n; swapStyle(); }
+      var tgt;
+      if (hold && now < hold.until) tgt = hold.v; else { hold = null; tgt = cycleTarget(now - start); }
+      cur += (tgt - cur) * Math.min(1, dt / 120);
+      L.style.transform = 'rotateY(' + cur.toFixed(2) + 'deg)';
+      R.style.transform = 'rotateY(' + (-cur).toFixed(2) + 'deg)';
+      var br = (1 - cur / MAX * 0.45).toFixed(3);
+      for (var q = 0; q < allImgs.length; q++) allImgs[q].style.filter = 'brightness(' + br + ')';
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+
+  if (reduce) return;
+
+  // 3D tilt cards
+  document.querySelectorAll('[data-tilt]').forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var b = card.getBoundingClientRect();
+      var px = (e.clientX - b.left) / b.width, py = (e.clientY - b.top) / b.height;
+      card.style.transform = 'rotateX(' + ((0.5 - py) * 10) + 'deg) rotateY(' + ((px - 0.5) * 12) + 'deg) translateY(-8px)';
+      card.style.setProperty('--gx', (px * 100) + '%');
+      card.style.setProperty('--gy', (py * 100) + '%');
+    });
+    card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+  });
+})();
+</script>
+<div style="position:fixed;left:12px;bottom:12px;z-index:60;background:rgba(16,48,42,.88);color:#fff;font:500 12px/1.3 Inter,sans-serif;padding:7px 12px;border-radius:999px;pointer-events:none">Concept mockup &copy; Blue Nova Marketing</div>
+</body>
+</html>
