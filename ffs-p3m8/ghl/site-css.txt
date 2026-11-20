@@ -246,3 +246,7 @@ section{padding:150px 0}
 .btn{will-change:transform}
 @media(max-width:960px){.band .bw{grid-template-columns:1fr;gap:44px}}
 @media(prefers-reduced-motion:reduce){.w{opacity:1!important;transform:none!important}}
+
+/* GoHighLevel container overrides - full bleed */
+.c-section>.inner{max-width:100%!important;margin-left:0!important;margin-right:0!important}
+.c-section,.c-row,.c-column{padding:0!important}
