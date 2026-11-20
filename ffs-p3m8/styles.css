@@ -136,3 +136,30 @@ section{padding:150px 0}
 .bc.big:hover:before{transform:scale(1.08)}
 @media(max-width:960px){.band{padding:110px 0}.strip figure{width:270px;height:360px}.mini{width:120px;height:120px;left:-6px}.split{gap:50px}section{padding:84px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.photo.rv .img{opacity:1!important;transform:none!important;clip-path:none!important}}
+
+.bc{background:linear-gradient(160deg,#21344a,#111d29);color:#fff;border:1px solid rgba(230,178,74,.28)}.bc p{color:#b9c6d4}.bc .n{color:var(--gold2)}.bc .more{color:var(--gold2)}
+.bc.gld{background:var(--grad);color:var(--ink);border:0}.bc.gld p{color:#3b2d0e}
+.bc.ph:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,26,36,.1) 0%,rgba(15,26,36,.6) 50%,rgba(15,26,36,.96) 90%),var(--bg) center 30%/cover;z-index:0;transition:transform .6s}.bc.ph:hover:before{transform:scale(1.08)}
+.bc .ic{position:absolute;top:26px;right:30px;width:64px;height:64px;z-index:2;opacity:.95}.bc .ic svg{width:100%;height:100%}
+.bc.big .ic{top:34px;right:38px;width:150px;height:150px;animation:bob 6s ease-in-out infinite}.ico{fill:none;stroke:#e6b24a;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.art{background:radial-gradient(circle at 30% 25%,rgba(230,178,74,.32),transparent 55%),radial-gradient(circle at 80% 85%,rgba(247,210,122,.18),transparent 50%),linear-gradient(160deg,#223446,#0f1a24);display:grid;place-items:center}
+.art svg{width:34%;filter:drop-shadow(0 10px 30px rgba(230,178,74,.4));animation:bob 6s ease-in-out infinite}
+.art .pr{position:absolute;border:1.5px solid rgba(247,210,122,.35);border-radius:50%;animation:pulse 5s ease-out infinite}.art .p1{width:46%;aspect-ratio:1}.art .p2{width:66%;aspect-ratio:1;animation-delay:-2.5s}
+@keyframes pulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+.photo:after{display:none}.photo{position:relative}.photo .img{box-shadow:0 40px 90px rgba(0,0,0,.35),0 0 0 1px rgba(230,178,74,.35)}
+.band.mesh .ul{inset:0;background:radial-gradient(at 18% 30%,rgba(230,178,74,.38),transparent 50%),radial-gradient(at 85% 75%,rgba(247,210,122,.22),transparent 55%),linear-gradient(135deg,#182633,#0b141d);background-size:140% 140%;animation:mesh 18s ease-in-out infinite alternate}
+@keyframes mesh{to{background-position:100% 80%}}
+.band.mesh:after{background:none}
+.band .bw{display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:center}
+.glass{background:rgba(15,26,36,.62);backdrop-filter:blur(14px);border:1px solid rgba(230,178,74,.35);border-radius:28px;padding:14px 34px;box-shadow:0 40px 90px rgba(0,0,0,.4)}
+.glass div{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.1)}.glass div:last-child{border:0}.glass b{display:block;font-family:'Sora';font-size:1.35rem;color:var(--gold2)}.glass span{color:#c3cfdb}
+.jr{margin-top:64px;overflow:hidden;padding:20px 0 40px}.jr .row{display:flex;gap:26px;width:max-content;padding:0 38px;will-change:transform}
+.jc{width:340px;min-height:360px;border-radius:30px;padding:36px;background:linear-gradient(160deg,#21344a,#111d29);color:#fff;border:1px solid rgba(230,178,74,.3);flex:none;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(24,38,51,.25)}
+.jc:nth-child(even){margin-top:46px;background:var(--grad);color:var(--ink);border:0}.jc:nth-child(even) p{color:#3b2d0e}
+.jc .ic{position:absolute;top:28px;left:34px;width:58px;height:58px}.jc:nth-child(even) .ico{stroke:#182633}.jc p{color:#b9c6d4;margin-top:10px;font-size:.98rem}.jc h3{font-size:1.4rem}
+.spot{position:absolute;inset:0;background:radial-gradient(520px at var(--mx,72%) var(--my,30%),rgba(247,210,122,.16),transparent 62%);z-index:-1;pointer-events:none}
+.sp .w{display:inline-block;opacity:0;transform:translateY(.7em) rotate(2deg);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*55ms)}.sp.in .w{opacity:1;transform:none}
+.band .ul{animation:kb 26s ease-in-out infinite alternate}@keyframes kb{to{scale:1.1}}
+.btn{will-change:transform}
+@media(max-width:960px){.band .bw{grid-template-columns:1fr;gap:44px}.jc{width:270px}}
+@media(prefers-reduced-motion:reduce){.w{opacity:1!important;transform:none!important}}
