@@ -175,7 +175,7 @@ nav a.l{display:block;padding:19px 12px;font-size:1.06rem;min-height:58px;border
 nav a.l:after{display:none}
 nav li[style]{margin-left:0!important}
 nav .btn.sm{display:flex;justify-content:center;margin-top:18px;padding:19px 26px;font-size:1.05rem;min-height:58px}
-.burger{display:block}.dd .menu{display:block;position:static;padding:0}.dd .menu div{border:0;box-shadow:none;background:transparent;padding:0}.dd .menu a{padding:17px 12px 17px 30px;min-height:54px;display:flex;align-items:center;font-size:1rem;border-radius:12px;border-top:1px solid rgba(255,255,255,.06)}.callbar{display:block}body{padding-bottom:72px}section{padding:80px 0}.split{gap:44px}.photo:after{display:none}}
+.burger{display:block;min-width:46px;min-height:46px;line-height:1;padding:6px 10px;margin-right:-8px}.dd .menu{display:block;position:static;padding:0}.dd .menu div{border:0;box-shadow:none;background:transparent;padding:0}.dd .menu a{padding:17px 12px 17px 30px;min-height:54px;display:flex;align-items:center;font-size:1rem;border-radius:12px;border-top:1px solid rgba(255,255,255,.06)}.callbar{display:block}body{padding-bottom:72px}section{padding:80px 0}.split{gap:44px}.photo:after{display:none}}
 
 .wrap{max-width:1240px;padding:0 38px}
 section{padding:150px 0}

@@ -18,16 +18,7 @@ if(!rm)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('mousemo
 document.querySelectorAll('.bc,.jc').forEach(c=>{const g=document.createElement('i');g.className='glow';c.appendChild(g);c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--cx',(e.clientX-r.left)+'px');c.style.setProperty('--cy',(e.clientY-r.top)+'px')})});
 
 
-
 document.querySelectorAll('.jr .row').forEach(row=>{const n=row.children.length;if(!n)return;
 row.parentElement.style.setProperty('--dur',(n*9)+'s');
 [...row.children].forEach(c=>{const d=c.cloneNode(true);d.setAttribute('aria-hidden','true');d.tabIndex=-1;row.appendChild(d)})});
-(function(){document.body.classList.add('inert');
-var t=document.createElement('div');t.id='mtoast';t.innerHTML='<b>Mock-up only.</b> Buttons and forms are switched off. Use <b>All pages</b> at the top to move around.';document.body.appendChild(t);var h;
-function toast(){t.classList.add('on');clearTimeout(h);h=setTimeout(function(){t.classList.remove('on')},3200)}
-function chrome(el){return el.closest('.rbar')||el.closest('.clabel')}
-document.addEventListener('click',function(e){var a=e.target.closest('a,button,input[type=submit]');if(!a||chrome(a))return;e.preventDefault();e.stopPropagation();toast()},true);
-document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();toast()});
-f.querySelectorAll('input,textarea').forEach(function(i){i.readOnly=true;i.tabIndex=-1});
-f.querySelectorAll('select,button').forEach(function(i){i.disabled=true;i.tabIndex=-1})});
-document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.closest('form')){e.preventDefault();toast()}},true);})();
+
