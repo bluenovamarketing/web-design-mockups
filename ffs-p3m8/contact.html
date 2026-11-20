@@ -4,7 +4,7 @@
 <meta property="og:title" content="Contact Family Flow Strategies | Las Vegas Pediatric Therapy"><meta property="og:description" content="Call 702-482-8713 or send a message. In-home occupational and speech therapy for kids and teens in Las Vegas, Henderson, North Las Vegas and Clark County."><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","MedicalBusiness"],"name":"Family Flow Strategies","description":"In-home pediatric occupational therapy and speech therapy for children and teens.","telephone":"+1-702-482-8713","url":"https://familyflowstrategies.com/","areaServed":[{"@type":"City","name":"Las Vegas"},{"@type":"City","name":"Henderson"},{"@type":"City","name":"North Las Vegas"},{"@type":"City","name":"Summerlin"},{"@type":"City","name":"Spring Valley"},{"@type":"City","name":"Enterprise"},{"@type":"City","name":"Paradise"},{"@type":"City","name":"Centennial Hills"},{"@type":"City","name":"Green Valley"},{"@type":"City","name":"Anthem"},{"@type":"City","name":"Mountain's Edge"},{"@type":"City","name":"Silverado Ranch"},{"@type":"City","name":"Boulder City"},{"@type":"City","name":"Sunrise Manor"}],"address":{"@type":"PostalAddress","addressLocality":"Las Vegas","addressRegion":"NV","addressCountry":"US"},"founder":{"@type":"Person","name":"Andrew Jackson","jobTitle":"Occupational Therapist"},"medicalSpecialty":["Occupational Therapy","Speech-Language Pathology"]}</script></head><body>
-<div class="note">DESIGN MOCKUP v9 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
+<div class="note">DESIGN MOCKUP v10 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
 <header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="images/logo.png" alt="Family Flow Strategies"></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
@@ -44,16 +44,9 @@ if(!rm)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('mousemo
 
 document.querySelectorAll('.bc,.jc').forEach(c=>{const g=document.createElement('i');g.className='glow';c.appendChild(g);c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--cx',(e.clientX-r.left)+'px');c.style.setProperty('--cy',(e.clientY-r.top)+'px')})});
 
-document.querySelectorAll('.jr .row').forEach(r=>[...r.children].forEach((c,i)=>c.style.setProperty('--d',i)));
-document.querySelectorAll('.jc').forEach(el=>io.observe(el));
-setTimeout(()=>document.querySelectorAll('.jc').forEach(el=>el.classList.add('in')),3000);
 
-document.querySelectorAll('.jr').forEach(jr=>{const row=jr.querySelector('.row');if(!row)return;
-const mk=(c,t)=>{const b=document.createElement('button');b.className='jnav '+c;b.type='button';b.innerHTML=t;b.setAttribute('aria-label',c==='p'?'Previous':'Next');return b};
-const p=mk('p','&#8249;'),n=mk('n','&#8250;');jr.append(p,n);
-const step=()=>{const c=row.querySelector('.jc');return c?c.getBoundingClientRect().width+26:320};
-p.addEventListener('click',()=>row.scrollBy({left:-step(),behavior:'smooth'}));
-n.addEventListener('click',()=>row.scrollBy({left:step(),behavior:'smooth'}));
-const upd=()=>{const max=row.scrollWidth-row.clientWidth-2;p.disabled=row.scrollLeft<=2;n.disabled=row.scrollLeft>=max;if(max<=2){p.style.display='none';n.style.display='none';jr.style.setProperty('--noedge','1')}};
-row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);setTimeout(upd,120);upd()});
+
+document.querySelectorAll('.jr .row').forEach(row=>{const n=row.children.length;if(!n)return;
+row.parentElement.style.setProperty('--dur',(n*9)+'s');
+[...row.children].forEach(c=>{const d=c.cloneNode(true);d.setAttribute('aria-hidden','true');d.tabIndex=-1;row.appendChild(d)})});
 </script><script data-goatcounter="https://bluenovamarketing.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
