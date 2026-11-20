@@ -2,7 +2,7 @@
 <meta name="robots" content="noindex,nofollow"><title>Getting Started | Family Flow Strategies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"></head><body>
-<div class="note">DESIGN MOCKUP v7 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
+<div class="note">DESIGN MOCKUP v8 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
 <header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="images/logo.png" alt="Family Flow Strategies"></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
@@ -16,7 +16,7 @@
 <div class="cta-row rv" style="margin-top:34px"><a class="btn" href="contact.html#form">Contact us to begin →</a></div></div>
 <div class="photo wide rv"><div class="img"><img src="images/k_cairn.jpg" alt="Balanced stones by the water"></div></div></div></section>
 <section><div class="wrap"><div class="center"><span class="tag">Your first visit</span><h2>What the evaluation <span class="gold">looks like</span></h2><p class="lead2 rv">No clipboard interrogation. We spend the time getting to know your child.</p></div><div class="bento">
-<div class="bc sm ph rv" style="--bg:url(images/th_two.jpg)"><span class="n">01</span><h3>We watch your child play</h3><p>Most of what we need, we learn by seeing how your child moves, plays and solves problems.</p></div>
+<div class="bc sm ph rv" style="--bg:url(images/rd_comic.jpg)"><span class="n">01</span><h3>We watch your child play</h3><p>Most of what we need, we learn by seeing how your child moves, plays and solves problems.</p></div>
 <div class="bc sm ph rv" style="--bg:url(images/kid_marker.jpg)"><span class="n">02</span><h3>We listen to you</h3><p>You know your child best. Your concerns and daily routines shape the whole plan.</p></div>
 <div class="bc sm ph rv" style="--bg:url(images/teen_park.jpg)"><span class="n">03</span><h3>We talk through goals</h3><p>Before we leave, you’ll know what we saw and what we’d work on first.</p></div></div></div></section>
 <section class="ink"><div class="wrap center"><span class="tag">Insurance</span><h2>Coverage &amp; payment</h2><p class="lead2 rv">We’re currently becoming credentialed with all major insurances in the Clark County area. We’re happy to do a brief consultation call, and self-pay is available.</p>
@@ -50,4 +50,8 @@ document.querySelectorAll('.hero,.pagehero').forEach(h=>{h.addEventListener('mou
 if(!rm)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.12).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.25).toFixed(1)+'px)'});b.addEventListener('mouseleave',()=>b.style.transform='')});
 
 document.querySelectorAll('.bc,.jc').forEach(c=>{const g=document.createElement('i');g.className='glow';c.appendChild(g);c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--cx',(e.clientX-r.left)+'px');c.style.setProperty('--cy',(e.clientY-r.top)+'px')})});
+
+document.querySelectorAll('.jr .row').forEach(r=>[...r.children].forEach((c,i)=>c.style.setProperty('--d',i)));
+document.querySelectorAll('.jc').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.jc').forEach(el=>el.classList.add('in')),3000);
 </script><script data-goatcounter="https://bluenovamarketing.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>

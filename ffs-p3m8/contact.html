@@ -2,7 +2,7 @@
 <meta name="robots" content="noindex,nofollow"><title>Contact | Family Flow Strategies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"></head><body>
-<div class="note">DESIGN MOCKUP v7 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
+<div class="note">DESIGN MOCKUP v8 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
 <header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="images/logo.png" alt="Family Flow Strategies"></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
@@ -40,4 +40,8 @@ document.querySelectorAll('.hero,.pagehero').forEach(h=>{h.addEventListener('mou
 if(!rm)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.12).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.25).toFixed(1)+'px)'});b.addEventListener('mouseleave',()=>b.style.transform='')});
 
 document.querySelectorAll('.bc,.jc').forEach(c=>{const g=document.createElement('i');g.className='glow';c.appendChild(g);c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--cx',(e.clientX-r.left)+'px');c.style.setProperty('--cy',(e.clientY-r.top)+'px')})});
+
+document.querySelectorAll('.jr .row').forEach(r=>[...r.children].forEach((c,i)=>c.style.setProperty('--d',i)));
+document.querySelectorAll('.jc').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.jc').forEach(el=>el.classList.add('in')),3000);
 </script><script data-goatcounter="https://bluenovamarketing.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
