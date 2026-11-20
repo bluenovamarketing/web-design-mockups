@@ -1,8 +1,10 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Speech Therapy | Family Flow Strategies</title>
+<meta name="robots" content="noindex,nofollow"><title>Pediatric Speech Therapy at Home | Las Vegas, NV</title>
+<meta name="description" content="In-home pediatric speech therapy in Las Vegas: articulation, language development, social communication and feeding support for children and teens.">
+<meta property="og:title" content="Pediatric Speech Therapy at Home | Las Vegas, NV"><meta property="og:description" content="In-home pediatric speech therapy in Las Vegas: articulation, language development, social communication and feeding support for children and teens."><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"></head><body>
-<div class="note">DESIGN MOCKUP v8 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
+<link rel="stylesheet" href="styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","MedicalBusiness"],"name":"Family Flow Strategies","description":"In-home pediatric occupational therapy and speech therapy for children and teens.","telephone":"+1-702-482-8713","url":"https://familyflowstrategies.com/","areaServed":[{"@type":"City","name":"Las Vegas"},{"@type":"City","name":"Henderson"},{"@type":"City","name":"North Las Vegas"},{"@type":"City","name":"Summerlin"},{"@type":"City","name":"Spring Valley"},{"@type":"City","name":"Enterprise"},{"@type":"City","name":"Paradise"},{"@type":"City","name":"Centennial Hills"},{"@type":"City","name":"Green Valley"},{"@type":"City","name":"Anthem"},{"@type":"City","name":"Mountain's Edge"},{"@type":"City","name":"Silverado Ranch"},{"@type":"City","name":"Boulder City"},{"@type":"City","name":"Sunrise Manor"}],"address":{"@type":"PostalAddress","addressLocality":"Las Vegas","addressRegion":"NV","addressCountry":"US"},"founder":{"@type":"Person","name":"Andrew Jackson","jobTitle":"Occupational Therapist"},"medicalSpecialty":["Occupational Therapy","Speech-Language Pathology"]}</script></head><body>
+<div class="note">DESIGN MOCKUP v9 · FOR CLIENT REVIEW · NOT THE LIVE WEBSITE</div>
 <header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="images/logo.png" alt="Family Flow Strategies"></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
@@ -19,8 +21,8 @@
 
 <footer><div class="wrap"><div class="g"><div><img src="images/logo.png" alt="" style="height:70px;margin-bottom:18px;pointer-events:none"><p style="max-width:340px">In-home occupational and speech therapy for kids and teens in Las Vegas and Clark County.</p></div>
 <div><h4>Explore</h4><a href="about.html">About</a><a href="occupational-therapy.html">Occupational Therapy</a><a href="speech-therapy.html">Speech Therapy</a><a href="getting-started.html">Getting Started</a><a href="contact.html">Contact</a></div>
-<div><h4>Contact</h4><a href="tel:702-482-8713">702-482-8713</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div>
-<div class="cp">© 2026 Family Flow Strategies. All rights reserved.</div></div></footer>
+<div><h4>Contact</h4><a href="tel:702-482-8713">702-482-8713</a><a href="contact.html">Send a message</a><span style="display:block;padding:5px 0">Las Vegas &amp; Clark County</span><span style="display:block;padding:5px 0">Mon–Fri, evening visits available</span></div></div>
+<div class="cp"><span>© 2026 Family Flow Strategies. All rights reserved.</span><nav><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></nav><span class="bn">Designed by <b>Blue Nova Marketing</b></span></div></div></footer>
 <div class="callbar"><a href="tel:702-482-8713">Call 702-482-8713</a></div>
 <script>document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('copy',e=>{if(!/INPUT|TEXTAREA/.test(e.target.tagName))e.preventDefault()});
 document.querySelectorAll('.img img').forEach(i=>{const f=()=>i.parentElement.classList.add('missing');i.addEventListener('error',f);if(i.complete&&!i.naturalWidth)f()});
@@ -43,4 +45,13 @@ document.querySelectorAll('.bc,.jc').forEach(c=>{const g=document.createElement(
 document.querySelectorAll('.jr .row').forEach(r=>[...r.children].forEach((c,i)=>c.style.setProperty('--d',i)));
 document.querySelectorAll('.jc').forEach(el=>io.observe(el));
 setTimeout(()=>document.querySelectorAll('.jc').forEach(el=>el.classList.add('in')),3000);
+
+document.querySelectorAll('.jr').forEach(jr=>{const row=jr.querySelector('.row');if(!row)return;
+const mk=(c,t)=>{const b=document.createElement('button');b.className='jnav '+c;b.type='button';b.innerHTML=t;b.setAttribute('aria-label',c==='p'?'Previous':'Next');return b};
+const p=mk('p','&#8249;'),n=mk('n','&#8250;');jr.append(p,n);
+const step=()=>{const c=row.querySelector('.jc');return c?c.getBoundingClientRect().width+26:320};
+p.addEventListener('click',()=>row.scrollBy({left:-step(),behavior:'smooth'}));
+n.addEventListener('click',()=>row.scrollBy({left:step(),behavior:'smooth'}));
+const upd=()=>{const max=row.scrollWidth-row.clientWidth-2;p.disabled=row.scrollLeft<=2;n.disabled=row.scrollLeft>=max;if(max<=2){p.style.display='none';n.style.display='none';jr.style.setProperty('--noedge','1')}};
+row.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);setTimeout(upd,120);upd()});
 </script><script data-goatcounter="https://bluenovamarketing.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
