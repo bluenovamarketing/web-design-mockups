@@ -30,7 +30,7 @@ const setTemperature = (temperature, direction = 1) => {
 };
 
 let cycleStart = performance.now();
-const cycleDuration = 22000;
+const cycleDuration = 18000;
 
 const animateTemperature = (time) => {
   const phase = ((time - cycleStart) % cycleDuration) / cycleDuration;
