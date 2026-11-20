@@ -10,8 +10,8 @@ const scaleProgress = document.querySelector('#scale-progress');
 const mixColor = (start, end, progress) => start.map((value, index) => Math.round(value + ((end[index] - value) * progress))).join(' ');
 
 const setTemperature = (temperature, direction = 1) => {
-  const clamped = Math.max(64, Math.min(76, temperature));
-  const progress = (clamped - 64) / 12;
+  const clamped = Math.max(67, Math.min(74, temperature));
+  const progress = (clamped - 67) / 7;
   const angle = -126 + (progress * 252);
   hero?.style.setProperty('--hero-a', mixColor([4, 28, 55], [64, 10, 14], progress));
   hero?.style.setProperty('--hero-b', mixColor([7, 83, 143], [190, 44, 34], progress));
@@ -36,11 +36,11 @@ const animateTemperature = (time) => {
   const phase = ((time - cycleStart) % cycleDuration) / cycleDuration;
   const rising = phase < 0.5;
   const progress = rising ? phase * 2 : (1 - phase) * 2;
-  setTemperature(64 + (progress * 12), rising ? 1 : -1);
+  setTemperature(67 + (progress * 7), rising ? 1 : -1);
   window.requestAnimationFrame(animateTemperature);
 };
 
-setTemperature(64, 1);
+setTemperature(67, 1);
 window.requestAnimationFrame(animateTemperature);
 
 const closeNav = () => {
