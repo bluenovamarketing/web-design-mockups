@@ -130,8 +130,8 @@ nav a.l:hover:after{transform:scaleX(1);transform-origin:left}
 .jc.ph:hover:before{transform:scale(1.14)}
 .jc>*{position:relative;z-index:1}
 .jc.ph,.jc.ph:nth-child(even){background:#11202d;color:#fff;border:1px solid rgba(230,178,74,.3);margin-top:0}
-.jc.ph:nth-child(even){margin-top:46px}
-.jc.ph p{color:#cbd6e2}
+
+.jc.ph p,.jc.ph:nth-child(even) p{color:#cbd6e2}.jc.ph h3,.jc.ph:nth-child(even) h3{color:#fff}.jc.ph:nth-child(even) .ico{stroke:#e6b24a}
 .chips span{transition:.4s}.chips span:hover{background:rgba(230,178,74,.22);border-color:var(--gold);transform:translateY(-5px)}
 .glass div{transition:.4s;padding-inline:0}.glass div:hover{padding-left:14px;background:rgba(230,178,74,.09)}
 .float{transition:transform .4s}.float:hover{transform:translateY(-10px) scale(1.04)}
@@ -165,7 +165,7 @@ section{padding:150px 0}
 .band:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,26,36,.94) 0%,rgba(15,26,36,.72) 55%,rgba(15,26,36,.35) 100%);z-index:-1}
 .band h2{max-width:720px}.pagehero h1 .gold{display:inline-block}.band p.lead2{max-width:560px;color:#d3dde7}
 .band .stats{display:flex;gap:46px;margin-top:44px;flex-wrap:wrap}.band .stats div{border-left:2px solid var(--gold);padding-left:18px}.band .stats b{display:block;font-family:'Sora';font-size:1.25rem;color:var(--gold2)}.band .stats span{color:#c3cfdb;font-size:.95rem}
-.stripsec{padding:130px 0 150px;overflow:hidden;background:var(--mist)}
+.stripsec{padding:130px 0 130px;background:var(--mist)}
 .strip{margin-top:64px;overflow:hidden;padding:20px 0 40px}
 .strip .row{display:flex;gap:28px;width:max-content;padding:0 38px;will-change:transform}
 .strip figure{width:360px;height:460px;border-radius:30px;overflow:hidden;box-shadow:0 34px 70px rgba(24,38,51,.22);position:relative;flex:none}
@@ -194,13 +194,13 @@ section{padding:150px 0}
 .band .bw{display:grid;grid-template-columns:1.1fr .9fr;gap:90px;align-items:center}
 .glass{background:rgba(15,26,36,.62);backdrop-filter:blur(14px);border:1px solid rgba(230,178,74,.35);border-radius:28px;padding:14px 34px;box-shadow:0 40px 90px rgba(0,0,0,.4)}
 .glass div{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.1)}.glass div:last-child{border:0}.glass b{display:block;font-family:'Sora';font-size:1.35rem;color:var(--gold2)}.glass span{color:#c3cfdb}
-.jr{margin-top:64px;overflow:hidden;padding:20px 0 40px}.jr .row{display:flex;gap:26px;width:max-content;padding:0 38px;will-change:transform}
-.jc{width:340px;min-height:360px;border-radius:30px;padding:36px;background:linear-gradient(160deg,#21344a,#111d29);color:#fff;border:1px solid rgba(230,178,74,.3);flex:none;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(24,38,51,.25)}
-.jc:nth-child(even){margin-top:46px;background:var(--grad);color:var(--ink);border:0}.jc:nth-child(even) p{color:#3b2d0e}
+.jr{margin-top:56px}.jr .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:26px;width:auto;padding:0;transform:none!important}
+.jc{width:auto;min-height:340px;border-radius:30px;padding:36px;background:linear-gradient(160deg,#21344a,#111d29);color:#fff;border:1px solid rgba(230,178,74,.3);flex:none;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(24,38,51,.25)}
+.jc:nth-child(even){background:var(--grad);color:var(--ink);border:0}.jc:nth-child(even) p{color:#3b2d0e}
 .jc .ic{position:absolute;top:28px;left:34px;width:58px;height:58px}.jc:nth-child(even) .ico{stroke:#182633}.jc p{color:#b9c6d4;margin-top:10px;font-size:.98rem}.jc h3{font-size:1.4rem}
 .spot{position:absolute;inset:0;background:radial-gradient(520px at var(--mx,72%) var(--my,30%),rgba(247,210,122,.16),transparent 62%);z-index:-1;pointer-events:none}
 .sp .w{display:inline-block;opacity:0;transform:translateY(.7em) rotate(2deg);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*55ms)}.sp.in .w{opacity:1;transform:none}
 .band .ul{animation:kb 26s ease-in-out infinite alternate}@keyframes kb{to{scale:1.1}}
 .btn{will-change:transform}
-@media(max-width:960px){.band .bw{grid-template-columns:1fr;gap:44px}.jc{width:270px}}
+@media(max-width:960px){.band .bw{grid-template-columns:1fr;gap:44px}}
 @media(prefers-reduced-motion:reduce){.w{opacity:1!important;transform:none!important}}
