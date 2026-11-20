@@ -4,7 +4,7 @@
 <meta property="og:title" content="Contact Family Flow Strategies | Las Vegas Pediatric Therapy"><meta property="og:description" content="Call 702-482-8713 or send a message. In-home occupational and speech therapy for kids and teens in Las Vegas, Henderson, North Las Vegas and Clark County."><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","MedicalBusiness"],"name":"Family Flow Strategies","description":"In-home pediatric occupational therapy and speech therapy for children and teens.","telephone":"+1-702-482-8713","url":"https://familyflowstrategies.com/","areaServed":[{"@type":"City","name":"Las Vegas"},{"@type":"City","name":"Henderson"},{"@type":"City","name":"North Las Vegas"},{"@type":"City","name":"Summerlin"},{"@type":"City","name":"Spring Valley"},{"@type":"City","name":"Enterprise"},{"@type":"City","name":"Paradise"},{"@type":"City","name":"Centennial Hills"},{"@type":"City","name":"Green Valley"},{"@type":"City","name":"Anthem"},{"@type":"City","name":"Mountain's Edge"},{"@type":"City","name":"Silverado Ranch"},{"@type":"City","name":"Boulder City"},{"@type":"City","name":"Sunrise Manor"}],"address":{"@type":"PostalAddress","addressLocality":"Las Vegas","addressRegion":"NV","addressCountry":"US"},"founder":{"@type":"Person","name":"Andrew Jackson","jobTitle":"Occupational Therapist"},"medicalSpecialty":["Occupational Therapy","Speech-Language Pathology"]}</script></head><body>
-<div class="rbar"><div class="in"><div class="l"><b>Family Flow Strategies</b><span class="rp">Website concept</span><span class="rp v">v12</span></div><div class="r"><span class="rp d">Draft &middot; not published</span><a href="review.html">All pages &amp; notes</a></div></div></div>
+<div class="rbar"><div class="in"><div class="l"><b>Family Flow Strategies</b><span class="rp">Website concept</span><span class="rp v">v13</span></div><div class="r"><span class="rp d">Draft &middot; not published</span><a href="review.html">All pages &amp; notes</a></div></div></div>
 <header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="images/logo.png" alt="Family Flow Strategies"></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
@@ -26,7 +26,8 @@
 <div><h4>Contact</h4><a href="tel:702-482-8713">702-482-8713</a><a href="contact.html">Send a message</a><span style="display:block;padding:5px 0">Las Vegas &amp; Clark County</span><span style="display:block;padding:5px 0">Mon–Fri, evening visits available</span></div></div>
 <div class="cp"><span>© 2026 Family Flow Strategies. All rights reserved.</span><nav><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></nav><span class="bn">Designed by <b>Blue Nova Marketing</b></span></div></div></footer>
 <div class="callbar"><a href="tel:702-482-8713">Call 702-482-8713</a></div>
-<script>document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('copy',e=>{if(!/INPUT|TEXTAREA/.test(e.target.tagName))e.preventDefault()});
+<script>
+document.addEventListener('contextmenu',e=>e.preventDefault());document.addEventListener('copy',e=>{if(!/INPUT|TEXTAREA/.test(e.target.tagName))e.preventDefault()});
 document.querySelectorAll('.img img').forEach(i=>{const f=()=>i.parentElement.classList.add('missing');i.addEventListener('error',f);if(i.complete&&!i.naturalWidth)f()});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('in')),2500);
@@ -49,4 +50,13 @@ document.querySelectorAll('.bc,.jc').forEach(c=>{const g=document.createElement(
 document.querySelectorAll('.jr .row').forEach(row=>{const n=row.children.length;if(!n)return;
 row.parentElement.style.setProperty('--dur',(n*9)+'s');
 [...row.children].forEach(c=>{const d=c.cloneNode(true);d.setAttribute('aria-hidden','true');d.tabIndex=-1;row.appendChild(d)})});
+(function(){document.body.classList.add('inert');
+var t=document.createElement('div');t.id='mtoast';t.innerHTML='<b>Mock-up only.</b> Buttons and forms are switched off. Use <b>All pages</b> at the top to move around.';document.body.appendChild(t);var h;
+function toast(){t.classList.add('on');clearTimeout(h);h=setTimeout(function(){t.classList.remove('on')},3200)}
+function chrome(el){return el.closest('.rbar')||el.closest('.clabel')}
+document.addEventListener('click',function(e){var a=e.target.closest('a,button,input[type=submit]');if(!a||chrome(a))return;e.preventDefault();e.stopPropagation();toast()},true);
+document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();toast()});
+f.querySelectorAll('input,textarea').forEach(function(i){i.readOnly=true;i.tabIndex=-1});
+f.querySelectorAll('select,button').forEach(function(i){i.disabled=true;i.tabIndex=-1})});
+document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.closest('form')){e.preventDefault();toast()}},true);})();
 </script><script data-goatcounter="https://bluenovamarketing.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></body></html>
