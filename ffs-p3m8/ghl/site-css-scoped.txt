@@ -250,6 +250,11 @@
 
 #ffs .soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}#ffs .soc a{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;padding:8px 14px;border:1px solid rgba(230,178,74,.38);border-radius:999px;color:var(--gold2);text-decoration:none;transition:.2s;min-height:38px;display:inline-flex;align-items:center}#ffs .soc a:hover{background:rgba(230,178,74,.14);color:#fff}#ffs footer .cp .bn a{color:inherit;text-decoration:none}#ffs footer .cp .bn a:hover{color:var(--gold2)}
 
-/* GoHighLevel container overrides - full bleed */
-.c-section>.inner{max-width:100%!important;margin-left:0!important;margin-right:0!important}
-.c-section,.c-row,.c-column{padding:0!important}
+/* GoHighLevel container overrides - full bleed.
+   Scoped to sections that actually contain the redesign (#ffs), so the
+   client's own pages (Ebook, Calendar, store) keep their normal layout. */
+.c-section:has(#ffs)>.inner{max-width:100%!important;margin-left:0!important;margin-right:0!important}
+.c-section:has(#ffs),.c-section:has(#ffs) .c-row,.c-section:has(#ffs) .c-column{padding:0!important}
+/* Fallback for browsers without :has() - the script adds .ffs-page to <html> */
+.ffs-page .c-section>.inner{max-width:100%!important;margin-left:0!important;margin-right:0!important}
+.ffs-page .c-section,.ffs-page .c-row,.ffs-page .c-column{padding:0!important}
