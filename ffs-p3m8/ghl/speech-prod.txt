@@ -1,4 +1,4 @@
-<header class="nav"><div class="wrap"><a class="brand" href="/"><img src="https://bluenovamarketing.github.io/web-design-mockups/ffs-p3m8/images/logo.png" alt="Family Flow Strategies"></a>
+<div id="ffs"><header class="nav"><div class="wrap"><a class="brand" href="/"><img src="https://bluenovamarketing.github.io/web-design-mockups/ffs-p3m8/images/logo.png" alt="Family Flow Strategies"></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
 <li><a class="l" href="/">Home</a></li><li><a class="l" href="/about">About</a></li>
@@ -28,4 +28,4 @@
 <div><h4>Explore</h4><a href="/about">About</a><a href="/occupational-therapy">Occupational Therapy</a><a href="/speech-therapy">Speech Therapy</a><a href="/getting-started">Getting Started</a><a href="/contact">Contact</a></div>
 <div><h4>Contact</h4><a href="tel:702-482-8713">702-482-8713</a><a href="/contact">Send a message</a><span style="display:block;padding:5px 0">Las Vegas &amp; Clark County</span><span style="display:block;padding:5px 0">Mon–Fri, evening visits available</span></div></div>
 <div class="cp"><span>© 2026 Family Flow Strategies. All rights reserved.</span><nav><a href="/privacypolicy">Privacy Policy</a><a href="/terms-conditions">Terms &amp; Conditions</a></nav><span class="bn">Designed by <a href="https://bluenovamarketing.com/" target="_blank" rel="noopener"><b>Blue Nova Marketing</b></a></span></div></div></footer>
-<div class="callbar"><a href="tel:702-482-8713">Call 702-482-8713</a></div>
+<div class="callbar"><a href="tel:702-482-8713">Call 702-482-8713</a></div></div>
