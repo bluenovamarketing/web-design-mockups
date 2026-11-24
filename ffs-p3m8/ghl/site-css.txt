@@ -248,6 +248,8 @@ section{padding:104px 0}
 @media(prefers-reduced-motion:reduce){.w{opacity:1!important;transform:none!important}}
 @media(max-width:960px){section{padding:72px 0}.stripsec{padding:64px 0}.wrap{padding:0 22px}}
 
+.soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.soc a{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;padding:8px 14px;border:1px solid rgba(230,178,74,.38);border-radius:999px;color:var(--gold2);text-decoration:none;transition:.2s;min-height:38px;display:inline-flex;align-items:center}.soc a:hover{background:rgba(230,178,74,.14);color:#fff}footer .cp .bn a{color:inherit;text-decoration:none}footer .cp .bn a:hover{color:var(--gold2)}
+
 /* GoHighLevel container overrides - full bleed */
 .c-section>.inner{max-width:100%!important;margin-left:0!important;margin-right:0!important}
 .c-section,.c-row,.c-column{padding:0!important}
