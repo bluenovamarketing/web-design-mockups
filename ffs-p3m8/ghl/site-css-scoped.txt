@@ -320,3 +320,15 @@
   #ffs .jr{margin-top:34px}
   #ffs .jr:before,#ffs .jr:after{width:34px}
 }
+
+/* Mobile brand name: the wordmark inside the logo is too small to read on a
+   phone, so show the text name too. Wrapped to two lines, which keeps it at
+   full size and still leaves clear space before the menu button. */
+@media(max-width:960px){
+  #ffs .brand{gap:13px}
+  #ffs .brand .bn{display:block;font-size:.95rem;white-space:normal;max-width:132px;line-height:1.15}
+}
+@media(max-width:360px){
+  #ffs .brand img{height:54px}
+  #ffs .brand .bn{font-size:.88rem;max-width:112px}
+}
