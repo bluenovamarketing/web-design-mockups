@@ -299,3 +299,24 @@
   #ffs .marq .t{animation:slide 34s linear infinite!important}
   #ffs .marq:hover .t{animation-play-state:paused!important}
 }
+
+/* ============ 2026-11-25 mobile corrections ============ */
+/* Footer: the 3-column rule above sits outside a media query and was beating
+   the mobile single-column rule, squeezing each column to ~50px. */
+@media(max-width:960px){
+  #ffs footer .g{grid-template-columns:1fr;gap:30px}
+  #ffs footer .g>div:nth-child(2){grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px}
+}
+@media(max-width:430px){
+  #ffs footer .g>div:nth-child(2){grid-template-columns:1fr}
+}
+
+/* Progress slider: .jc had flex:none + width:auto, so each card sized to its
+   paragraph on one line (~700px wide). Pin cards to a readable width. */
+#ffs .jr .jc{flex:0 0 auto;width:clamp(248px,80vw,320px)}
+@media(max-width:600px){
+  #ffs .jr .jc{min-height:300px;padding:26px}
+  #ffs .jr .jc .ic{top:22px;left:24px;width:46px;height:46px}
+  #ffs .jr{margin-top:34px}
+  #ffs .jr:before,#ffs .jr:after{width:34px}
+}
