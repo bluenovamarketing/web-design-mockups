@@ -1,4 +1,4 @@
-<div id="ffs"><header class="nav"><div class="wrap"><a class="brand" href="/"><img src="https://bluenovamarketing.github.io/web-design-mockups/ffs-p3m8/images/logo.png" alt="Family Flow Strategies"></a>
+<div id="ffs"><header class="nav"><div class="wrap"><a class="brand" href="/"><img src="https://bluenovamarketing.github.io/web-design-mockups/ffs-p3m8/images/logo.png" alt="Family Flow Strategies"><span class="bn">Family Flow Strategies</span></a>
 <button class="burger" onclick="document.getElementById('n').classList.toggle('open')" aria-label="Menu">☰</button>
 <nav id="n"><ul>
 <li><a class="l on" href="/">Home</a></li><li><a class="l" href="/about">About</a></li>

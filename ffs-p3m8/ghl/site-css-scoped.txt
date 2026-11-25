@@ -258,3 +258,44 @@
 /* Fallback for browsers without :has() - the script adds .ffs-page to <html> */
 .ffs-page .c-section>.inner{max-width:100%!important;margin-left:0!important;margin-right:0!important}
 .ffs-page .c-section,.ffs-page .c-row,.ffs-page .c-column{padding:0!important}
+
+/* ================= 2026-11-25 client revisions ================= */
+/* Sticky header: #ffs had overflow-x:hidden, which makes a scroll container
+   and silently disables position:sticky on the nav. clip does not. */
+#ffs{overflow-x:clip;padding-bottom:0}
+#ffs .nav{position:sticky;top:0;z-index:60}
+
+/* Brand lockup - business name beside the mark, fills the dead space */
+#ffs .brand{display:flex;align-items:center;gap:15px;text-decoration:none}
+#ffs .brand .bn{font-family:'Sora',system-ui,sans-serif;font-weight:600;font-size:1.16rem;color:#fff;line-height:1.2;letter-spacing:.005em;white-space:nowrap}
+#ffs .brand:hover .bn{color:var(--gold2)}
+
+/* Hero chip wording */
+#ffs .float.b>b{text-transform:capitalize}
+
+/* Tighter vertical rhythm across every page */
+#ffs section{padding:64px 0}
+#ffs .band{padding:112px 0}
+
+/* Footer: Explore in two columns, less dead space top and bottom */
+#ffs footer{padding:58px 0 20px}
+#ffs footer .g{grid-template-columns:1.6fr 1.5fr 1fr;gap:40px}
+#ffs footer .g>div:nth-child(2){display:grid;grid-template-columns:repeat(2,minmax(0,auto));column-gap:46px;row-gap:0;align-content:start;justify-content:start}
+#ffs footer .g>div:nth-child(2) h4{grid-column:1/-1}
+#ffs footer .cp{margin-top:32px;padding-top:20px}
+
+@media(max-width:1180px){#ffs .brand .bn{font-size:1rem}}
+@media(max-width:1040px){#ffs .brand .bn{display:none}}
+@media(max-width:960px){
+  #ffs section{padding:52px 0}
+  #ffs .band{padding:86px 0}
+  #ffs footer{padding:46px 0 18px}
+  #ffs footer .g>div:nth-child(2){grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+}
+
+/* Marquee keeps scrolling even when the OS asks for reduced motion -
+   it is a slow linear loop and pauses on hover. */
+@media(prefers-reduced-motion:reduce){
+  #ffs .marq .t{animation:slide 34s linear infinite!important}
+  #ffs .marq:hover .t{animation-play-state:paused!important}
+}
